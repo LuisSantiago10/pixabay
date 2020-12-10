@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MensajeError } from './MensajeError';
 
-export const Formulario = () => {
+export const Formulario = ({setBuscar}) => {
     const [termino, setTermino] = useState('');
     const [errorTermino, setErrorTermino] = useState(false);
 
@@ -13,6 +13,7 @@ export const Formulario = () => {
         }
 
         setErrorTermino(false);
+        setBuscar(termino);
     }
 
     return (
